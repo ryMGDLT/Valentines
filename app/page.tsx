@@ -23,10 +23,10 @@ export default function ValentinePage() {
   const messages = [
     "Will you be my Valentine?",
     "Ayaw?",
-    "Ayaw Talaga?",
+    "Ayaw talaga?",
     "Sure na?",
     "Final na talaga? Ayaw? Last na to pag nag no ka wla na kasunod",
-    "joke lng meron pa. Pleaaaaase payag ka na 😢 paiyak na ako oh",
+    "joke lang meron pa. Pleaaaaase payag ka na 😢 paiyak na ako oh",
     "Papayag ka or tatagiliran kita? 🤨"
   ];
 
