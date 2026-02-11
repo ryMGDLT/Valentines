@@ -25,8 +25,8 @@ export default function ValentinePage() {
     "Ayaw?",
     "Ayaw talaga?",
     "Sure na?",
-    "Final na talaga? Ayaw? Last na to pag nag no ka wla na kasunod",
-    "joke lang meron pa. Pleaaaaase payag ka na 😢 paiyak na ako oh",
+    "Final na talaga? Ayaw? Last na to pag nag no ka wala na kasunod",
+    "Joke lang meron pa. Pleaaaaase payag ka na 😢 paiyak na ako oh",
     "Papayag ka or tatagiliran kita? 🤨"
   ];
 
