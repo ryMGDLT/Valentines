@@ -188,18 +188,41 @@ export default function ValentinePage() {
             <button
               onClick={(e) => {
                 // Move to random position on screen every time it's clicked
-                const randomX = Math.random() * (window.innerWidth - 64);
-                const randomY = Math.random() * (window.innerHeight - 64);
-                setNoButtonPosition({ x: randomX, y: randomY });
+                // Get the buttons container position to avoid overlapping with message
+                const buttonsContainer = e.currentTarget.closest('.flex');
+                if (buttonsContainer) {
+                  const containerRect = buttonsContainer.getBoundingClientRect();
+                  const minY = containerRect.top + 50; // Add padding below message area
+                  const maxY = window.innerHeight - 64;
+                  const randomX = Math.random() * (window.innerWidth - 64);
+                  const randomY = minY + Math.random() * (maxY - minY);
+                  setNoButtonPosition({ x: randomX, y: randomY });
+                } else {
+                  // Fallback to original logic if container not found
+                  const randomX = Math.random() * (window.innerWidth - 64);
+                  const randomY = 200 + Math.random() * (window.innerHeight - 264);
+                  setNoButtonPosition({ x: randomX, y: randomY });
+                }
                 setHasMoved(true);
                 handleNoClick();
               }}
               onMouseEnter={() => {
                 if (!hasMoved && noClicks > 0) {
                   // Move to random position on hover
-                  const randomX = Math.random() * (window.innerWidth - 64);
-                  const randomY = Math.random() * (window.innerHeight - 64);
-                  setNoButtonPosition({ x: randomX, y: randomY });
+                  const buttonsContainer = document.querySelector('.flex.flex-col.md\\:flex-row');
+                  if (buttonsContainer) {
+                    const containerRect = buttonsContainer.getBoundingClientRect();
+                    const minY = containerRect.top + 50; // Add padding below message area
+                    const maxY = window.innerHeight - 64;
+                    const randomX = Math.random() * (window.innerWidth - 64);
+                    const randomY = minY + Math.random() * (maxY - minY);
+                    setNoButtonPosition({ x: randomX, y: randomY });
+                  } else {
+                    // Fallback to original logic if container not found
+                    const randomX = Math.random() * (window.innerWidth - 64);
+                    const randomY = 200 + Math.random() * (window.innerHeight - 264);
+                    setNoButtonPosition({ x: randomX, y: randomY });
+                  }
                   setHasMoved(true);
                 }
               }}
