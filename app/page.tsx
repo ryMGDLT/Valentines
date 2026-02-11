@@ -149,12 +149,6 @@ export default function ValentinePage() {
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-red-600 mb-4 md:mb-6 lg:mb-8">Yaayyyy!!</h1>
           <p className="text-base md:text-lg lg:text-xl text-gray-700 mb-6 md:mb-8 lg:mb-10">See u 💕</p>
-          <button
-            onClick={handleTryAgain}
-            className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 md:py-4 md:px-8 lg:py-5 lg:px-10 rounded-full transition-colors duration-200 text-base md:text-lg lg:text-xl"
-          >
-            Try Again
-          </button>
         </div>
       </div>
     );
@@ -223,15 +217,6 @@ export default function ValentinePage() {
         )}
       </div>
 
-      {/* Reset Button */}
-      {noClicks > 0 && (
-        <button
-          onClick={() => setNoClicks(0)}
-          className="mt-6 text-sm text-gray-500 hover:text-gray-700 underline"
-        >
-          Start Over
-        </button>
-      )}
     </div>
   );
 }
